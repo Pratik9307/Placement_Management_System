@@ -1,0 +1,461 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+.Nav-Bar {
+    width: 100%;
+    background-color: #333;
+    position: fixed; /* Use fixed instead of sticky */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 10px 20px; /* Add some padding for better appearance */
+}
+
+/* Optional: Adding some styles for buttons inside the navbar */
+.Nav-Bar button {
+    background-color: #444; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Button padding */
+    margin: 0 5px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.Nav-Bar button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+.content {
+    padding-top: 60px; /* Add padding to ensure content isn't hidden behind the fixed navbar */
+    background-color: #f9f9f9; /* Content background color */
+}
+
+
+/* Navbar Container */
+.Nav-Bar {
+    width: 100%;
+    background-color: #333;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.child-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-bar img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-icons i {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-icons i:hover {
+    color: #00bfff;
+}
+
+.user-dropdown {
+    position: relative;
+}
+
+.user-dropdown i {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #444;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* General dark mode styling */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+/* Dark mode for navbar */
+body.dark-mode .Nav-Bar {
+    background-color: #1e1e1e;
+}
+
+/* Dark mode for icons and buttons */
+body.dark-mode .nav-icons i,
+body.dark-mode .dark-mode-toggle i,
+body.dark-mode #right-btn {
+    color: #fff;
+}
+
+body.dark-mode .dropdown-content a {
+    color: #ddd;
+}
+
+body.dark-mode .dropdown-content a:hover {
+    background-color: #333;
+}
+
+/* Other dark mode related styles */
+body.dark-mode input {
+    background-color: #333;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-icons, .right-side-bar {
+        display: none;
+    }
+
+    .hamburger-menu i {
+        display: block;
+    }
+
+    .nav-icons.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+/* Logout Button */
+#right-btn {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#right-btn:hover {
+    background-color: #007bbf;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #1b1b1b;
+}
+
+body.dark-mode .Nav-Bar {
+    background-color: #222;
+}
+
+body.dark-mode .nav-icons i,
+body.dark-mode .dark-mode-toggle i,
+body.dark-mode #right-btn {
+    color: #ddd;
+}
+
+body.dark-mode .dropdown-content a {
+    color: #ddd;
+}
+
+body.dark-mode .dropdown-content a:hover {
+    background-color: #333;
+}
+
+
+.Nav-Bar{
+    background-color: gray;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    gap: 10px ;
+    display: flex;
+
+}
+.logo-bar img{
+    height: 70px;
+    margin-top: 5px;
+
+    }
+.child-wrapper{
+    display: flex;
+
+}
+#imgs{
+    margin-top: 28px;
+    display: flex;
+    gap: 15px;
+    margin-left: 10px;
+    
+}
+#imgs:hover i{
+    transform: scale(1.04);
+}
+.right-side-bar{
+    width: 30px;
+    
+    margin-right: 90px;
+    margin-top: 20px;
+
+}
+/* #right-btn{
+    font-size: 10px;
+    width: 65px;
+    height: 30px;
+    background-color:aqua;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+#right-btn {
+    background-color: #e84949;
+    padding: 1rem ;
+    color: white;
+    font-size: 12px;
+    box-shadow: 5px 5px 7px 0px #0000003f;position: relative;
+    z-index: 1;
+    border-radius: 50%;
+   
+}
+#right-btn::before{
+    content:"" ;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scalex(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: -1;
+    
+
+}
+#right-btn:hover::before{
+     transform: scale(1);
+
+}
+#R-right-btn {
+    background-color: lightseagreen;
+    padding: 0.5rem 1.7rem;
+    color: white;
+    font-size: 15px;
+    box-shadow: 5px 5px 7px 0px #0000003f;position: relative;
+    z-index: 1;
+    border-radius: 4px;
+    margin-top: 250px;
+    margin-left: -210px;
+   
+}
+#R-right-btn::before{
+    content:"" ;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scalex(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: -1;
+    
+
+}
+#R-right-btn:hover::before{
+     transform: scale(1);
+
+}
+
+.All-btn input {
+    display: block; /* Set buttons to display as block elements */
+    margin-bottom: 40px; /* Add some bottom margin for spacing */
+  
+}
+
+
+.All-btn input{
+    height: 40px;
+    width: 150px;
+    border-radius: 9px;
+    cursor: pointer;
+    
+
+
+}
+.All-btn-1 input {
+    display: block; /* Set buttons to display as block elements */
+    margin-bottom: 50px; /* Add some bottom margin for spacing */
+
+}
+    
+    
+.All-btn-1 input{
+    border: 1px solid black;
+    height: 35px;
+    width: 100px;
+    margin-top: 0px;
+}
+.mid-bar{
+    display: flex;
+    gap: 20px;
+    width: 25%;
+    height: 650px;
+    background-color: gray;
+    padding: 20px;
+}
+.right-side-bar img{
+    display: flex;
+    display: inline-block;
+    
+}
+.content-wrapper {
+    flex: 1; /* Fill remaining space */
+    background-color: white;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: flex-end; /* Center the images horizontally */
+    padding: 30px;
+    margin-top: -320px;
+    gap: 10px;
+}
+
+.image-container img { 
+
+    width: 100px; /* Adjust image size */
+    margin: 10px;
+  
+}
+.image-container img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.image-container {
+    margin-top: -320px;
+    display: flex ;gap: 80px;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 30px;
+    gap: 150px;
+}
+
+.image-wrapper img {
+    position: relative;
+    border: 1px solid black;
+    /* border-radius: 50%; */
+    overflow: hidden;
+    border: none;
+}
+
+
+
+
+#PS{
+    background-color: #e84949;
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    position: relative;
+    z-index: 1;
+   
+}
+#PS::before{
+    content:"" ;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scalex(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: -1;
+    
+
+}
+#PS:hover::before{
+     transform: scale(1);
+
+}
+.B-btn{
+    margin-top: 300px;
+}
+#f-btn{
+    border-radius: 4px;
+}
+
+

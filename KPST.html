@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPST.html</title>
+    <link rel="stylesheet" href="KPST.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"  />
+    <script src="KPST.js"></script>
+</head>
+<body>
+<form action="getData.php" method="post">
+   
+    <div class="container-1">
+        <nav class="Nav-Bar">
+            <div class="child-wrapper">
+                <!-- Logo Section -->
+                <div class="logo-bar">
+                    <img src="Images/images.png" alt="Logo" class="logo">
+                </div>
+
+                <!-- Navbar Icons and User Options -->
+                <div id="imgs" class="nav-icons">
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-sharp fa-solid fa-user-pen"></i>
+                    <div class="user-dropdown">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <div class="dropdown-content">
+                            <a href="#">Profile</a>
+                            <a href="#">Settings</a>
+                            <a href="#" onclick="Pratik()">Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <div class="dark-mode-toggle">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                    <input type="checkbox" id="theme-switch" onclick="toggleDarkMode()" />
+                </div>
+
+             
+
+             
+            </div>
+        </nav>
+    </div>
+<br>
+
+
+      <div class="mid-bar">
+                 <div class="All-btn"> 
+        
+                      <input type=submit id="first-btn" name="totalcount" value="Total Count" getdata></input> 
+                      <input type=submit id="second-btn" name="PlacedStudent" value="Placed Students Count"></input> 
+                      <input type=submit id="third-btn" name="Waitlisted" value="Waitlisted"></input> 
+                 </div>
+
+                 <br>
+                 <div class="All-btn-1"> 
+        
+                  <!-- <input id="f-btn" type="text" placeholder="Total Count"  readonly>
+                  <input id="s-btn" type="text" placeholder="Placed Students Count" readonly>
+                  <input id="t-btn" type="text" placeholder="Waitlisted" readonly> -->
+                 </div>
+                 <div class="insert_data">
+                    <input type=submit name="insert" value="Insert Data" id="R-right-btn"></input>
+                    <br>
+                    <br>
+                    <input type=submit name="Report" value="Report" id="R-right-btn"></input>
+                    <div id="result"></div>
+                 </div>
+                
+                 
+      </div>
+
+      <div class="image-container">
+        <div class="image-wrapper">
+            <img src="Images/Armstrong2.png" alt="">
+            <input type="submit" id="PS" class="image-btn" name="Armstrong" value="Armstrong"></input>
+            <div id="dataContainer"></div>
+        </div>
+    
+        <div class="image-wrapper">
+            <img src="Images/byjus.jpg" alt="">
+            <input type=submit id="PS" class="image-btn" name="Byjus" value="Byjus"></input>
+        </div>
+    
+        <div class="image-wrapper">
+            <img src="Images/Deloitte.png" alt="">
+            <input type=submit id="PS" class="image-btn" name="Deloitte" value="Deloitte"></input>
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="Images/js control.png" alt="">
+            <input type=submit id="PS" class="image-btn" name="Jscontrol" value="JS_Control"></input>
+        </div>
+    
+        <div class="image-wrapper">
+            <img src="Images/klassic Wheels.png" alt="">
+            <input type=submit id="PS" name="Klassic" value="Klassic" class="image-btn"></input>
+        </div>
+    
+        <div class="image-wrapper">
+            <img src="Images/renata-logoo.png" alt="">
+            <input type=submit id="PS" class="image-btn" name="Renata" value="Renata"></input>
+        </div>
+    </div>
+    
+    <div class="image-container">
+        <div class="image-wrapper">
+            <img src="Images/Tefologhic.jpg" alt="">
+            <input type=submit id="PS" class="image-btn" name="Tefologhic" value="Tefologhic"></input>
+        </div>
+    
+        <div class="image-wrapper">
+            <img src="Images/Toyota2.jpg" alt="">
+            <input type=submit id="PS" class="image-btn" name="toyota" value="Toyota"></input>
+        </div>
+    
+        <div class="image-wrapper">
+            <img src="Images/wallspace.png" alt="">
+            <input type=submit id="PS" class="image-btn" name="wallspace" value="Wallspace"></input>
+        </div>
+    </div>
+    
+    <!-- Add an ID to the Login input type=submit for redirection -->
+    
+    <script src="KPST.js"></script>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+   
+
+ 
+
